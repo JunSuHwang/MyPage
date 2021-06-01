@@ -1,19 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>aa</title>
+        <title>HwangJunSu</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1">
         <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
         <script>
-            $(document).ready(function() {
-                var src = $('script').attr('src');
-                $('body').append(src);
-            });
+            var button1 = document.getElementById('nav1');
+            window.onload = function() {
+                button1.onclick = function() {
+                getElementById('firstPage').style.display=block;
+                getElementById('secondPage').style.display=none;
+            };
+        };
         </script>
+        <style>
+            #first{
+                display:flex;
+            }
+            @media(max-width: 500px) {
+                #first{
+                    display:block;
+                }
+            }
+            #nav-container{
+                width:25%;
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                margin:auto;
+                padding: 8px;
+                text-decoration: none;
+                background-color: red;
+            }
+
+            .nav-item{
+                display: inline-block;
+                margin: 10px;
+            }
+        </style>
     </head>
     <body>
-
+        <ul id = "nav-container">
+            <li class="nav-item" id="nav1">홈</li>
+            <li class="nav-item" id="nav2">취미</li>
+        </ul>
+        <div id="firstPage">
+            <h1>소개</h1>
+            <div id="first">
+                <img src="../image.jpg" width=300px height=200px alt="image">
+                <p>현재 강원대학교에 재학중인 황준수입니다.
+                    강원대 컴퓨터정보통신공학을 전공하고 있고, 현재 군대를 다녀와서 2학년 재학중입니다. 
+                    배우고 있는 과목은 웹프로그래밍, 리눅스 프로그래밍, 논리회로, 자료구조, 미주의 역사와 문화, 자료와 정보 입니다.
+    
+                </p>
+            </div>
+            <a href="mailto:wnstn9904@naver.com" target="_blank">이메일</a>
+        </div>
+        <br>
+        <div id="secondPage">
+            <h1>취미</h1>
+            <img src="http://www.busan.com/nas/wcms/wcms_data/photos/2019/05/22/2019052210200143511_m.jpg" 
+            width="200" height="200">
+             <img src="https://lh3.googleusercontent.com/proxy/hZvmm_PO-vdGh4KimUL26ZoH9NSDWQr_lG4zpgsiL3BYzioh3_v2Ld9LAGH7z_hESG_awBiJQdM9OO7KdW-9QFwiOI83ifYWY49D9q5uFxCI6C3MEpHpzUqaY28FVhlZGW5QuqZBNsOe_4ASXZFzciRnBU8GZfjDF91o0MYJavYN"
+             width="200" height="200">
+             <img src="https://yt3.ggpht.com/ytc/AAUvwnjkjfwolT7enHlIsv2kSn17Ei6Vte8cKIuvVIUtug=s900-c-k-c0x00ffffff-no-rj"
+             width="200" height="200">
+        </div>
+        <br>
     </body>
 </html>
